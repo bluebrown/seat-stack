@@ -3,10 +3,9 @@ module.exports = function (eleventyConfig) {
     'html',
     'njk',
     'md',
+    'js',
+    'css'
   ]);
-
-  // eleventyConfig.addWatchTarget("./src/sass/");
-  // eleventyConfig.addPassthroughCopy('static');
 
   return {
     dir: {

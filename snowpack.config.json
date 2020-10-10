@@ -1,7 +1,4 @@
 {
-  "install": [
-    "alpinejs"
-  ],
   "mount": {
     ".cache/11ty": "/",
     "src/assets": "/static"
@@ -9,11 +6,7 @@
   "plugins": [
     [
       "@snowpack/plugin-build-script",
-      {
-        "cmd": "postcss",
-        "input": [
-          ".css"
-        ],
+      { "cmd": "postcss", "input": [ ".css" ],
         "output": [
           ".css"
         ]
@@ -21,7 +14,28 @@
     ],
     [
       "@snowpack/plugin-run-script",
-      { "cmd": "eleventy", "watch": "$1 --watch" }
+      {
+        "cmd": "eleventy",
+        "watch": "$1 --watch"
+      }
+    ],
+    [
+      "@snowpack/plugin-run-script",
+      {
+        "cmd": "eslint 'src/**/*.js'",
+        "watch": "watch \"$1\" src"
+      }
     ]
-  ]
+  ],
+  "install": [
+    "alpinejs"
+  ],
+  "devOptions": {
+    "port": 8080,
+    "open": "none"
+  },
+  "buildOptions": {
+    "clean": true,
+    "sourceMap": true
+  }
 }

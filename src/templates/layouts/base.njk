@@ -2,20 +2,24 @@
 <html lang="en">
   <head>
     {% include "head.njk" %}
-    {% if site.env %}
-      <!-- capture the CSS content as a Liquid variable -->
-      {% set css %}{% include "/static/index.css" %}{% endset %}
-      <style> 
-        {{ css | safe }}
-      </style>
-    {% else %}
-    <link rel="stylesheet" href="/static/index.css">
-    {% endif %}
+    <style>
+      {{css | safe}}
+    </style>
+    <link rel="stylesheet" href="/static/main.css">
+    <script src="/static/main.js" type="module" defer="defer"></script>
+    {%- for style in styles -%}
+     <link rel="stylesheet" href="{{ style }}">
+    {%- endfor -%}
   </head>
+
   <body>
-    <main>
-    {{ content | safe }}
+    <main class="flex justify-center p-5">
+      {{ content | safe }}
     </main>
   </body>
-  <script src="/static/index.js"></script>
+
+  {%- for script in scripts -%}
+    <script src="{{ script | safe }}"></script>
+  {%- endfor -%}
+
 </html>
