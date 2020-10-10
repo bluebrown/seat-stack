@@ -1,0 +1,23 @@
+{
+  "name": "snowpack-container",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@snowpack/plugin-build-script": "^2.0.8",
+    "alpinejs": "^2.7.0",
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.1.0",
+    "snowpack": "^2.13.3",
+    "tailwindcss": "^1.8.13"
+  },
+  "scripts": {
+    "build":"snowpack build",
+    "dev": "snowpack dev --polyfill-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

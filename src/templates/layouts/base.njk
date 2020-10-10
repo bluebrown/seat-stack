@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.njk" %}
+    {% if site.env %}
+      <!-- capture the CSS content as a Liquid variable -->
+      {% set css %}{% include "/static/index.css" %}{% endset %}
+      <style> 
+        {{ css | safe }}
+      </style>
+    {% else %}
+    <link rel="stylesheet" href="/static/index.css">
+    {% endif %}
+  </head>
+  <body>
+    <main>
+    {{ content | safe }}
+    </main>
+  </body>
+  <script src="/static/index.js"></script>
+</html>

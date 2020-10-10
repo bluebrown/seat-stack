@@ -1,0 +1,27 @@
+{
+  "install": [
+    "alpinejs"
+  ],
+  "mount": {
+    ".cache/11ty": "/",
+    "src/assets": "/static"
+  },
+  "plugins": [
+    [
+      "@snowpack/plugin-build-script",
+      {
+        "cmd": "postcss",
+        "input": [
+          ".css"
+        ],
+        "output": [
+          ".css"
+        ]
+      }
+    ],
+    [
+      "@snowpack/plugin-run-script",
+      { "cmd": "eleventy", "watch": "$1 --watch" }
+    ]
+  ]
+}
