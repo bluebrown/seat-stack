@@ -6,17 +6,11 @@ module.exports = function (eleventyConfig) {
     'html',
     'njk',
     'md',
-    "liquid",
-    "11tydata.js"
   ]);
+  
 
-  // pass asset file file without touching it. They will be processed
-  // by snowpack from the .cache directory
-  eleventyConfig.addPassthroughCopy("src/**/*.(js|css|png|img|jpg|jpeg|ico)");
-
-  // can use passtrhough with object as argument to specify the location
-  // eleventyConfig.addPassthroughCopy({ "src/img": "img" });
-
+  // this is apparently slow, its better to use a dedicated folder.
+  eleventyConfig.addPassthroughCopy("src/content/**/*.(js|css|png|img|jpg|jpeg|ico)");
 
   // Layouts
   eleventyConfig.addLayoutAlias('base', 'base.njk')
@@ -33,7 +27,7 @@ module.exports = function (eleventyConfig) {
       includes: "../templates/includes",
       layouts: "../templates/layouts",
       data: "../data",
-      output: '.cache/11ty',
+      output: '_11ty',
     },
     passthroughFileCopy: true,
     markdownTemplateEngine: "md",

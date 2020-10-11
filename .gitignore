@@ -7,3 +7,5 @@ yarn.lock
 build
 dist
 _out
+_site
+_11ty

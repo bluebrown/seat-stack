@@ -1,8 +1,11 @@
 {
   "mount": {
-    ".cache/11ty": "/",
+    "_11ty": "/",
     "src/assets": "/static"
   },
+  "exclude": [
+    "**/*.11tydata.js"
+  ],
   "plugins": [
     [
       "@snowpack/plugin-build-script",
