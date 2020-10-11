@@ -1,0 +1,60 @@
+---
+layout: base.njk
+scripts:
+- ./index.js
+---
+<span x-data="{}">
+  <span class="shadow-md w-screen">
+    {%include "navbar.njk"%}
+  </span>
+  <section class="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 p-16 flex items-center">
+    <span class="container mx-auto px-4">
+      <h1 class="text-6xl font-semibold">Coding Safari</h1>
+      <p class="text-3xl leading-none font-semibold">A new adventure every day</p>
+      <button class="text-2xl font-semibold py-2 px-4 rounded-full mt-3 
+      bg-green-500 hover:bg-green-400 text-white">
+        Explore
+      </button>
+    </span>
+  </section>
+</span>
+<main class="pt-10">
+  <div class="container mx-auto px-4">
+    <section>
+      <div class="grid grid-cols-3 gap-3">
+        {% for i in range(0, 9) -%}
+          <article class="bg-white p-3 rounded-md">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorum culpa, accusantium placeat incidunt nesciunt totam praesentium dolores assumenda quam perspiciatis fugit. Voluptates atque at aperiam, nulla officiis dolorum soluta.
+          </article>
+        {%- endfor %}
+      </div>
+    </section>
+  </div>
+
+  <section class="bg-white my-10">
+    <article class="container mx-auto px-4 py-10">
+      <h1 class="text-center text-3xl text-gray-800 font-semibold">
+        I am traveling the galaxy with my blue towel
+      </h1>
+      <p class="text-center text-gray-800 text-2xl">
+        “A towel, [The Hitchhiker's Guide to the Galaxy] says, is about the most massively useful thing an interstellar hitchhiker can have. Partly it has great practical value. You can wrap it around you for warmth as you bound across the cold moons of Jaglan Beta; you can lie on it on the brilliant marble-sanded beaches of Santraginus V, inhaling the heady sea vapors; you can sleep under it beneath the stars which shine so redly on the desert world of Kakrafoon; use it to sail a miniraft down the slow heavy River Moth; wet it for use in hand-to-hand-combat; wrap it round your head to ward off noxious fumes or avoid the gaze of the Ravenous Bugblatter Beast of Traal (such a mind-boggingly stupid animal, it assumes that if you can't see it, it can't see you); you can wave your towel in emergencies as a distress signal, and of course dry yourself off with it if it still seems to be clean enough.”
+      </p>
+      <p class="text-gray-500 italtic text-right leading-loose">
+        ― Douglas Adams, The Hitchhiker's Guide to the Galaxy
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <div class="grid grid-cols-3 gap-3">
+      {% for i in range(0, 3) -%}
+        <article class="bg-white p-3 rounded-md">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorum culpa, accusantium placeat incidunt nesciunt totam praesentium dolores assumenda quam perspiciatis fugit. Voluptates atque at aperiam, nulla officiis dolorum soluta.
+          <hr>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorum culpa, accusantium placeat incidunt nesciunt totam praesentium dolores assumenda quam perspiciatis fugit. Voluptates atque at aperiam, nulla officiis dolorum soluta.
+
+        </article>
+      {%- endfor %}
+    </div>
+  </section>
+</main>

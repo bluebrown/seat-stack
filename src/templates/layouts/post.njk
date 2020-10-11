@@ -1,7 +1,9 @@
 ---
-layout: base.njk
+layout: blog.njk
+styles:
+   - /static/markdown.css
 ---
 
-<article class="border p-6 bg-white rounded-md">
+<article class="border p-6 bg-white rounded-md markdown-body">
   {{content | safe}}
 </article>

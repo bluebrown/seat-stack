@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.2",
     "@snowpack/plugin-build-script": "^2.0.8",
     "alpinejs": "^2.7.0",
     "eslint": "^7.11.0",

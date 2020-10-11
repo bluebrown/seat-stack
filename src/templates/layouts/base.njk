@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     {% include "head.njk" %}
+
     <style>
       {{css | safe}}
     </style>
+
     <link rel="stylesheet" href="/static/main.css">
-    <script src="/static/main.js" type="module" defer="defer"></script>
     {%- for style in styles -%}
-     <link rel="stylesheet" href="{{ style }}">
+      <link rel="stylesheet" href="{{ style }}">
     {%- endfor -%}
   </head>
 
   <body>
-    <main class="flex justify-center p-5">
-      {{ content | safe }}
-    </main>
-  </body>
 
-  {%- for script in scripts -%}
-    <script src="{{ script | safe }}"></script>
-  {%- endfor -%}
+    {{content | safe}}
+
+    <script src="/static/main.js" type="module"></script>
+    {%- for script in scripts -%}
+      <script src="{{ script | safe }}"></script>
+    {%- endfor -%}
+    
+  </body>
 
 </html>
