@@ -71,6 +71,9 @@ styles:
             <h1 class="text-4xl text-center text-gray-800 leading-loose">Your Feautre Caption Here</h1>
             <p class="text-center text-2xl text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique a voluptatem quidem magni quisquam aliquam impedit ducimus vel quae doloribus earum quaerat, expedita dolores amet sapiente sed qui recusandae. Qui.</p>
             <p class="text-center text-2xl text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="text-center pt-2">
+            </p>
+
           </div>
         </div>
 
@@ -107,13 +110,19 @@ styles:
   <section>
     <div class="container mx-auto">
 
-      <div class="grid grid-cols-3 gap-3">
+      <div class="grid grid-cols-2 gap-3">
 
-        {% for i in range(0, 3) -%}
-          <article class="bg-white p-3 rounded-md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorum culpa, accusantium placeat incidunt nesciunt totam praesentium dolores assumenda quam perspiciatis fugit. Voluptates atque at aperiam, nulla officiis dolorum soluta.
-            <hr>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorum culpa, accusantium placeat incidunt nesciunt totam praesentium dolores assumenda quam perspiciatis fugit. Voluptates atque at aperiam, nulla officiis dolorum soluta.
+        {% for i in range(0, 6) -%}
+          <article class="bg-white px-3 py-6 rounded-md cursor-pointer hover:shadow-md">
+            <h1 class="text-xl text-gray-800">Showcase a Project</h1>
+            <ul class="flex text-sm text-gray-600 -mx-1">
+              <li class="px-1"><a href="/unix">#unix</a></li>
+              <li class="px-1"><a href="/server">#server</a></li>
+            </ul>
+            <p class="text-xl text-gray-800">
+               Voluptates atque at aperiam, nulla officiis dolorum soluta.
+            </p>
+            <p class="text-sm text-gray-500 leading-loose">2020-01-01</p>
           </article>
         {%- endfor %}
       </div>
