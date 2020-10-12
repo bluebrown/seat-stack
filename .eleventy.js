@@ -1,25 +1,27 @@
-// const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
-  // fomrats
+  // formats
   eleventyConfig.setTemplateFormats([
     'html',
     'njk',
     'md',
   ]);
   
-
   // this is apparently slow, its better to use a dedicated folder.
   eleventyConfig.addPassthroughCopy("src/content/**/*.(js|css|png|img|jpg|jpeg|ico)");
+
+  // watch asset dir
+  // eleventyConfig.addWatchTarget("src/assets");
 
   // Layouts
   eleventyConfig.addLayoutAlias('base', 'base.njk')
   eleventyConfig.addLayoutAlias('blog', 'base.njk')
   eleventyConfig.addLayoutAlias('post', 'post.njk')
 
-  // plugins
-  // eleventyConfig.addPlugin(syntaxHighlight);
-
+  // plugins 
+  eleventyConfig.addPlugin(syntaxHighlight);
+  
   //base
   return {
     dir: {

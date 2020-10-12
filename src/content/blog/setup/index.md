@@ -69,7 +69,7 @@ sudo vim /etc/ssh/sshd_config
 
 Add the following lines to the config file.
 
-```conf
+```shell
 LoginGraceTime 1m
 PermitRootLogin no
 PubkeyAuthentication yes
@@ -118,7 +118,7 @@ sudo vim /etc/sysctl.d/disableipv6.conf
 
 Place the following entry to disable IPv6 for all adapter
 
-```conf
+```shell
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 # A particular network card instead of default can be accessed
@@ -157,7 +157,7 @@ sudo vim /etc/fail2ban/fail.d/ssh.conf
 
 The following setting will ban any IP forever, after three failed login attempts withing two hours. At this point, We don't expect anyone to be able to connect other than us. Some redundancy cannot hurt though. 
 
-```conf
+```shell
 [DEFAULT]
 bantime = -1
 findtime = 2h

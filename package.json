@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "snowpack build",
-    "dev": "snowpack dev --polyfill-node",
+    "dev": "snowpack dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
