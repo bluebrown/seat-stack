@@ -1,1 +1,36 @@
-    <footer class="p-1 border-b bg-gray-400">footer</footer>
+ <footer class="bg-gray-300 border-t flex flex-col items-center p-12">
+    <ul class="w-full flex flex-wrap justify-center text-center -mx-2 text-xl text-gray-700">
+      <li class="px-2">
+        <a class="hover:text-gray-900" href="/">Homepage</a>
+      </li>
+      <li class="px-2">
+        <a class="hover:text-gray-900" href="/blog">Blog</a>
+      </li>
+      <li class="px-2">
+        <a  class="hover:text-gray-900"href="/apps">Apps</a>
+      </li>
+      <li class="px-2">
+        <a class="hover:text-gray-900" href="/contact">Contact</a>
+      </li>
+    </ul>
+    
+    <ul class="w-full flex flex-wrap justify-center text-center -mx-1 text-xl text-gray-500 mt-5">
+      <li class="px-1">
+        {% include "icons/github.njk" %}
+      </li>
+      <li class="px-1">
+        {% include "icons/twitter.njk" %}
+      </li>
+      <li class="px-1">
+        {% include "icons/linkdin.njk" %}
+      </li>
+      <li class="px-1">
+        {% include "icons/gmail.njk" %}
+      </li>
+    </ul>
+
+    <p class="text-gray-700 mt-12">
+      Copyright 2020 Nico Braun. All right reserved. 
+      <a class="text-sm text-gray-700 hover:text-gray-900" href="/terms-of-use">Term of Use</a>
+    </p>
+  </footer>
