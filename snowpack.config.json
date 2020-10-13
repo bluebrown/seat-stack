@@ -35,6 +35,7 @@
   ],
   "devOptions": {
     "port": 8080,
+    "fallback": "404.html",
     "open": "none"
   },
   "buildOptions": {

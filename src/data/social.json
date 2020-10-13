@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Github",
+    "href": "https://github.com/bluebrown",
+    "icon": "github"
+  },
+  {
+    "label": "Twitter",
+    "href": "https://twitter.com/codingsafari",
+    "icon": "twitter"
+  },
+  {
+    "label": "Linkedin",
+    "href": "https://www.linkedin.com/in/nico-braun",
+    "icon": "linkedin"
+  },
+  {
+    "label": "Email",
+    "href": "mailto:rainbowstack@gmail.com",
+    "icon": "gmail"
+  }
+]
