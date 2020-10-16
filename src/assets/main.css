@@ -9,3 +9,8 @@ body {
 button {
   @apply px-3 py-2 leading-none rounded-sm border;
 }
+
+
+input:focus, button:focus, textarea:focus {
+  @apply shadow-outline outline-none;
+}
