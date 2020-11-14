@@ -6,40 +6,21 @@ styles:
   - ./index.css
 ---
 
-<script defer>
-  function navData() {
-    return {
-      scrollPos: 'test',
-      ownHeight: null,
-      navHeight: null,
-      init() {
-        console.log('init run')
-      },
-      onWindowScroll() {
-        console.log('scrolling...')
-      }
-    }
-  }
-</script>
-
-<span x-ref="wrapper" x-data="navData()" x-init="init" @scroll.window="onWindowScroll">
-  <span x-ref="nav-wrap" class="shadow-md w-screen relative">
-    {%include "navbar.njk"%}
-    <p class="p-3 rounded-full sticky" x-text="scrollPos"></p>
-  </span>
-  <section class="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 p-16 flex items-center">
-    <span class="container mx-auto">
-      <h1 class="text-6xl font-semibold">Coding Safari</h1>
-      <p class="text-3xl leading-none font-semibold">A new adventure every day</p>
-      <button class="text-2xl font-medium py-2 px-4 rounded-full mt-3 shadow-md
+<div class="shadow-md w-screen">
+  {%include "navbar.njk"%}
+</div>
+<section class="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 p-16 flex items-center">
+  <span class="container mx-auto">
+    <h1 class="text-6xl font-semibold">Coding Safari</h1>
+    <p class="text-3xl leading-none font-semibold">A new adventure every day</p>
+    <button class="text-2xl font-medium py-2 px-4 rounded-full mt-3 shadow-md
       bg-green-500 hover:bg-green-400 text-white border-none border-transparent flex items-center">
-       <span>Explore</span>
-      </button>
-    </span>
-  </section>
-</span>
+      <span>Explore</span>
+    </button>
+  </span>
+</section>
 
-<main>
+<main id="main">
   <section class="mt-16">
     <div class="container mx-auto">
       <div class="grid grid-cols-3 gap-3">
@@ -88,8 +69,7 @@ styles:
             <h1 class="text-4xl text-center text-gray-800 leading-loose">Your Feautre Caption Here</h1>
             <p class="text-center text-2xl text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique a voluptatem quidem magni quisquam aliquam impedit ducimus vel quae doloribus earum quaerat, expedita dolores amet sapiente sed qui recusandae. Qui.</p>
             <p class="text-center text-2xl text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p class="text-center pt-2">
-            </p>
+            <p class="text-center pt-2"></p>
 
           </div>
         </div>
@@ -133,11 +113,15 @@ styles:
           <article class="bg-white px-3 py-6 rounded-md cursor-pointer hover:shadow-md">
             <h1 class="text-xl text-gray-800">Showcase a Project</h1>
             <ul class="flex text-sm text-gray-600 -mx-1">
-              <li class="px-1"><a href="/unix">#unix</a></li>
-              <li class="px-1"><a href="/server">#server</a></li>
+              <li class="px-1">
+                <a href="/unix">#unix</a>
+              </li>
+              <li class="px-1">
+                <a href="/server">#server</a>
+              </li>
             </ul>
             <p class="text-xl text-gray-800">
-               Voluptates atque at aperiam, nulla officiis dolorum soluta.
+              Voluptates atque at aperiam, nulla officiis dolorum soluta.
             </p>
             <p class="text-sm text-gray-500 leading-loose">2020-01-01</p>
           </article>
